@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Push Demo</title>
+ <link rel="stylesheet" href="styles.css">
+ <link rel="manifest" href="/manifest.json">
+ <meta name="theme-color" content="#4a76a8">
+ <!-- Добавляем favicon с относительным путем -->
+ <link rel="icon" href="icons/icon-512.png" type="image/png">
+ <!-- Для iOS можно добавить -->
+ <link rel="apple-touch-icon" href="icons/icon-512.png">
+</head>
+<body>
+ <div class="container">
+ <h1>Push-уведомления и задачи</h1>
+ <button id="subscribeBtn">Включить уведомления</button>
+ <div id="status">Статус: проверка...</div>
+ <!-- NEW: Display notifications status -->
+ <div id="notificationStatus">Уведомления выключены</div>
+ <div class="todo-container">
+ <div class="filters">
+ <button id="filterAll">Все</button>
+ <button id="filterActive">Активные</button>
+ <button id="filterCompleted">Выполненные</button>
+ </div>
+ <div class="new-task">
+ <input type="text" id="newTaskInput" placeholder="Новая задача">
+ <button id="addTaskBtn">Добавить задачу</button>
+ </div>
+ <ul id="taskList"></ul>
+ </div>
+ <div class="send-box">
+ <h3>Тест push-уведомления:</h3>
+ <input type="text" id="titleInput" value="Новое уведомление">
+ <textarea id="bodyInput">Привет! Это тест push-сообщения</textarea>
+ <button id="sendBtn">Отправить тест</button>
+ </div>
+ </div>
+ <script src="app.js"></script>
+</body>
+</html>
